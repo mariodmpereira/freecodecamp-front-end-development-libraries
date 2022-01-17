@@ -5,6 +5,7 @@ import {createExerciseFiles} from '../create-course-files.mjs';
 const COURSE = {
     name: "Bootstrap",
     number: "01",
+    filesExtension: "html",
     lessons: [
         "Use Responsive Design with Bootstrap Fluid Containers",
         "Make Images Mobile Responsive",

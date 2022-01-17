@@ -1,6 +1,6 @@
 import fs from 'fs';
-import path, {dirname} from 'path';
-import {fileURLToPath} from 'url';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,7 +12,7 @@ export function createExerciseFiles(course) {
 }
 
 function createCourseFolder(course) {
-    fs.mkdir(createFolderName(course), {recursive: true}, (err) => {
+    fs.mkdir(createFolderName(course), { recursive: true }, (err) => {
         if (err) throw err;
     });
 }
@@ -49,5 +49,5 @@ function createFolderName(course) {
 }
 
 function createFileName(course, currentLessonIndex, i) {
-    return createFolderName(course) + currentLessonIndex + "-" + course.lessons[i].replace(/\s+/g, '-').toLowerCase() + ".js";
+    return createFolderName(course) + currentLessonIndex + "-" + course.lessons[i].replace(/\s+/g, '-').toLowerCase() + "." + course.filesExtension;
 }
