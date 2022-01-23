@@ -13,7 +13,7 @@ class MyComponent extends React.Component {
     // Change code below this line
 
     toggleVisibility() {
-        this.setState((state, props) => ({
+        this.setState(state => ({
             visibility: !state.visibility
         }))
     }
